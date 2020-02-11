@@ -1,25 +1,20 @@
+package fizzbuzz;
 
-public class Program {
-	public static void main(String[] args)
-	{
-		for(int i = 0; i < 100; i++)
-		{
-			if (i % 3 == 0 && i % 5 == 0)
-			{
-				System.out.println("FizzBuzz");                    
-			}
-			else 
-				if(i % 3 == 0)
-				{
-					System.out.println("Fizz");
-				}
-				else 
-					if(i % 5 == 0)
-					{
-						System.out.println("Buzz");
-					}
-					else
-						System.out.println(i);
+public class FizzBuzz {
+	public String eval(int numToEval) {
+
+        if(numToEval%15==0){
+            return "FizzBuzz";
         }
-    }	
+
+        if(numToEval%5==0){
+            return "Buzz";
+        }
+
+        if(numToEval%3==0){
+            return "Fizz";
+        }
+
+        return String.valueOf(numToEval);
+    }
 }
